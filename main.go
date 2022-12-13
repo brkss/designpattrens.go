@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"sync"
 
 	"github.com/brkss/designpattrens.go/decorator"
+	"github.com/brkss/designpattrens.go/generator"
 )
 
 
@@ -22,7 +24,10 @@ func main(){
   l(10000);
   l(10000);
 
-  //fmt.Println(decorator.Pi(1000))
-  //fmt.Println(decorator.Pi(50000))
+
+  // generator 
+  for i := range generator.Fib(100000){
+    fmt.Println(i)
+  }
 
 }
